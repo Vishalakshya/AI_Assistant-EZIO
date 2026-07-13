@@ -1,0 +1,30 @@
+appId: com.antigravity.ezio
+productName: EZIO
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - electron/**/*.js
+  - package.json
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: build/icon.ico
+  requestedExecutionLevel: asInvoker
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: EZIO AI
+  createDesktopShortcut: always
+  createStartMenuShortcut: always
+publish:
+  provider: github
+  owner: your-org
+  repo: ezio-desktop
+  releaseType: release

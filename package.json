@@ -1,0 +1,13 @@
+{
+  "name": "ezio-root",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:backend": "cd backend && venv\\Scripts\\uvicorn app.main:app --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:ollama": "ollama serve",
+    "dev:all": "concurrently \"npm run dev:ollama\" \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
